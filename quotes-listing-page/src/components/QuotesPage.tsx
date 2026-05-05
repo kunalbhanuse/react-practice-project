@@ -3,7 +3,12 @@ import axios from "axios";
 import "./quotes.css";
 
 function QuotesPage() {
-  const [quotes, setQuotes] = useState([]);
+  type Quote = {
+    id: number;
+    author: string;
+    content: string;
+  };
+  const [quotes, setQuotes] = useState<Quote[]>([]);
   useEffect(() => {
     async function quatesFeatch() {
       const res = await axios.get(
