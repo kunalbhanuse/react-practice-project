@@ -3,7 +3,13 @@ import axios from "axios";
 import "./JokePage.css";
 
 function JokePage() {
-  const [jokes, setJokes] = useState([]);
+  type Joke = {
+    id: number;
+    content: string;
+    categories: string[];
+  };
+
+  const [jokes, setJokes] = useState<Joke[]>([]);
   useEffect(() => {
     const featchJokes = async () => {
       const res = await axios.get(
