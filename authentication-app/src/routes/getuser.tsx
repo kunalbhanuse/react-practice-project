@@ -42,6 +42,16 @@ function GetUser() {
     featchUser()
   }, [])
   const logoutUser = async () => {
+    const res = await axios.post(
+      'https://api.freeapi.app/api/v1/users/logout',
+      {},
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+        },
+      },
+    )
+    console.log(res)
     localStorage.removeItem('accessToken')
     navigate({ to: '/login' })
   }
