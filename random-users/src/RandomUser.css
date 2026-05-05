@@ -1,0 +1,132 @@
+/* Container styling */
+.page-wrapper {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+}
+
+.main-title {
+  text-align: center;
+  color: #1a202c;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+/* Grid Layout */
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Styling */
+.user-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  border: 1px solid #edf2f7;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Header with Image and Name */
+.head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.avatar-wrapper {
+  position: relative;
+}
+
+.user-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.status-dot.male {
+  background-color: #4299e1;
+}
+.status-dot.female {
+  background-color: #ed64a6;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.username {
+  font-size: 0.85rem;
+  color: #718096;
+  margin: 2px 0 0 0;
+}
+
+/* Middle Section Details */
+.middle {
+  padding-top: 15px;
+  border-top: 1px solid #edf2f7;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.icon {
+  font-size: 1.1rem;
+}
+
+.text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Footer styling */
+.footer {
+  margin-top: 15px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a0aec0;
+  font-weight: 600;
+}
