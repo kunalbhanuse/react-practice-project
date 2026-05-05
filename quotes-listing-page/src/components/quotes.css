@@ -1,0 +1,58 @@
+/* wrapper */
+.wrappper {
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 40px 20px;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+h1 {
+  color: gold;
+}
+
+/* container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* card */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 18px 20px;
+  color: #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* author */
+.card p:first-child {
+  font-weight: 600;
+  font-size: 14px;
+  color: #93c5fd;
+  margin-bottom: 10px;
+}
+
+/* quote text */
+.card p:last-child {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #e5e7eb;
+}
